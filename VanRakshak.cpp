@@ -209,11 +209,6 @@ int main()
 
     while (window.isOpen())
     {
-        /*
- ****************************************
- Handle the players input
- ****************************************
- */
 
         Event event;
         while (window.pollEvent(event))
@@ -228,6 +223,12 @@ int main()
             }
         }
 
+                /*
+ ****************************************
+ Handle the players input
+ ****************************************
+ */
+
 
         if (Keyboard::isKeyPressed(Keyboard::Escape))
         {
@@ -237,22 +238,24 @@ int main()
         if (Keyboard::isKeyPressed(Keyboard::Return))
         {
             paused = false;
-        }
-        // Reset the time and the score
-        score = 0;
-        timeRemaining = 6;
 
-        // Make all the branches disappear -
- // starting in the second position
-        for (int i = 1; i < NUM_BRANCHES; i++)
-        {
-            branchPositions[i] = side::NONE;
+            // Reset the time and the score
+            score = 0;
+            timeRemaining = 6;
+
+            // Make all the branches disappear -
+     // starting in the second position
+            for (int i = 1; i < NUM_BRANCHES; i++)
+            {
+                branchPositions[i] = side::NONE;
+            }
+            // Make sure the gravestone is hidden
+            spriteRIP.setPosition(675, 2000);
+            // Move the player into position
+            spritePlayer.setPosition(580, 720);
+            acceptInput = true;
+
         }
-        // Make sure the gravestone is hidden
-        spriteRIP.setPosition(675, 2000);
-        // Move the player into position
-        spritePlayer.setPosition(580, 720);
-        acceptInput = true;
         // Wrap the player controls to
 // Make sure we are accepting input
         if (acceptInput)
