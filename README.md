@@ -6,5 +6,5 @@ I made this game just for sharpen my coding skills and get a better grip into my
 
 ScreenShot of the game :
 
-<img align="left" alt="Coding" width="1000" src="https://github.com/prathakpr/Atomic_Quiz_VR/blob/main/SS%20of%20game.jpeg">
+<img align="left" alt="Coding" width="1000" src="https://github.com/prathakpr/VanRakshak/blob/master/Screenshot%20(241).png">
 
